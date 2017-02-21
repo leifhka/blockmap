@@ -1,6 +1,6 @@
 
 compile:
-	gcc -Wall -o blockmap blockmap.c -lcurses
+	gcc -std=c99 -Wall -o blockmap blockmap.c -lcurses
 run: 
 	./blockmap
 
