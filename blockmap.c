@@ -2,20 +2,7 @@
 #include <ncurses.h>
 #include <stdlib.h>
 
-struct World {
-    int position, max_x, max_y;
-    char **data;
-};
-
-typedef struct World World;
-
-/*-----------------*/
-
-void init_screen();
-
-void eval_input(char, World *, WINDOW *);
-
-void draw_map(World *, WINDOW *);
+#include "blockmap.h"
 
 /*-----------------*/
 
