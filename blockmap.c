@@ -14,7 +14,7 @@ void init_screen()
     refresh();
 }
 
-void eval_input(char c, World *m, WINDOW *w)
+void eval_input(char c, WORLD *m, WINDOW *w)
 {
     if (c == 'l') {
 	(m->position)++;
@@ -29,7 +29,7 @@ void eval_input(char c, World *m, WINDOW *w)
     }
 }
 
-void draw_map(World *world, WINDOW *win)
+void draw_map(WORLD *world, WINDOW *win)
 {
     wmove(win, 0, 0);
     int world_size = world->max_x * world->max_y;
@@ -52,7 +52,7 @@ int main()
     WINDOW *map_win = newwin(row_map, col, 0, 0);
     wrefresh(map_win);
 
-    World *world = malloc(sizeof(World));
+    WORLD *world = malloc(sizeof(WORLD));
     world->position = 0;
     world->max_x = col;
     world->max_y = row_map;

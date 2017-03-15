@@ -1,14 +1,14 @@
-typedef struct World World;
-typedef struct Cell Cell;
+typedef struct WORLD WORLD;
+typedef struct CELL CELL;
 
-struct Cell {
+struct CELL {
     char val;
     char *note;
     char *text;
-    World *other_world;
+    WORLD *other_world;
 };
 
-struct World {
+struct WORLD {
     int position, max_x, max_y;
     char **data;
 };
@@ -17,7 +17,7 @@ struct World {
 
 void init_screen();
 
-void eval_input(char, World *, WINDOW *);
+void eval_input(char, WORLD *, WINDOW *);
 
-void draw_map(World *, WINDOW *);
+void draw_map(WORLD *, WINDOW *);
 
