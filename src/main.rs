@@ -10,8 +10,8 @@ fn main() {
     init_screen();
 
 	//let vecd = VecDeque::new();
-	let world = World::new(10, 10); // {position: 0, max_x: 10, max_y: 10, data: vecd};
-    printw(format!("{:?}", world).as_str());
+	let map = Map::new(10, 10); // {position: 0, max_x: 10, max_y: 10, data: vecd};
+    printw(format!("{:?}", map).as_str());
 
     refresh();
     getch();
